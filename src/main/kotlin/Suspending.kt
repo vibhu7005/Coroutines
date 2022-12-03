@@ -14,6 +14,9 @@ fun main() {
     GlobalScope.launch {
         fun2()
     }
+    Thread {
+        functionCalls++
+    }.start()
     sleep(5500)
     print(functionCalls)
 }
